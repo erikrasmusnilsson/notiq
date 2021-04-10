@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+
+import FileDownload from 'js-file-download'
+import Editor from './components/molecules/editor'
+import notiq from './providers/notiq'
 
 function App() {
+  const onEditorExport = async content => {
+    try {
+      const response = await notiq.post("/notes", {
+        filename: "output.pdf",
+        content
+      }, {
+        responseType: "blob"
+      })
+      FileDownload(response.data, "test.pdf")
+    } catch (err) {
+      alert(err)
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Editor onExport={onEditorExport}/>
     </div>
   );
 }

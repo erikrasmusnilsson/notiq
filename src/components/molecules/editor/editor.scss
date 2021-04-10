@@ -1,0 +1,9 @@
+.editor {
+    display: flex;
+    flex-direction: column;
+
+    &__controls {
+        align-self: flex-end;
+        padding: 14px 4px;
+    }
+}

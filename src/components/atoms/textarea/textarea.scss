@@ -1,0 +1,10 @@
+@import '../../../sass/colors.scss'; 
+
+.textarea {
+    flex: 1;
+    background-color: $light;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    resize: none;
+}

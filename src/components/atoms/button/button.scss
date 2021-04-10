@@ -1,0 +1,20 @@
+@import '../../../sass/colors.scss';
+
+.button {
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid $medium;
+    background-color: $light;
+    padding: 8px 12px;
+    transition: all .2s;
+    user-select: none;
+
+    &:hover {
+        border-color: $dark;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $medium;
+    }
+}
