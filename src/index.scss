@@ -9,9 +9,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   background-color: $light;
+  color: $darker;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+* {
+  font-family: inherit;
+
+  &::placeholder {
+    color: $dark;
+  }
 }

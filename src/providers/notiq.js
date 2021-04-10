@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export default axios.create({
-    baseURL: "http://localhost:1337"
+    baseURL: "https://still-fjord-12418.herokuapp.com"
 })

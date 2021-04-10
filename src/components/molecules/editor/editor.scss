@@ -1,9 +1,15 @@
+@import '../../../sass/colors.scss';
+
 .editor {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 
     &__controls {
-        align-self: flex-end;
-        padding: 14px 4px;
+        display: flex;
+        justify-content: flex-end;
+        background-color: $light;
+        align-items: center;
+        padding: 8px;
     }
 }

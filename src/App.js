@@ -7,13 +7,14 @@ import notiq from './providers/notiq'
 function App() {
   const onEditorExport = async content => {
     try {
+      content += `\n\n*Created with Notiq*\n`
       const response = await notiq.post("/notes", {
         filename: "output.pdf",
         content
       }, {
         responseType: "blob"
       })
-      FileDownload(response.data, "test.pdf")
+      FileDownload(response.data, "notes.pdf")
     } catch (err) {
       alert(err)
     }
