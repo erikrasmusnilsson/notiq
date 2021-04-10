@@ -14,7 +14,7 @@ const Editor = ({onExport}) =>  {
             console.log("ctrl down")
         } else if (e.keyCode === 69 && ctrlIsDown) {
             console.log("export")
-            onExport()
+            onExport(note)
         }
     }
 
