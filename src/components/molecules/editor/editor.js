@@ -27,9 +27,6 @@ const Editor = ({onExport}) =>  {
 
     return (
         <div className="editor">
-            <div className="editor__controls">
-                <Button onClick={() => onExport(note)}>Export</Button>
-            </div>
             <Textarea 
                 placeholder="Start writing" 
                 text={note} 
